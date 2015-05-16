@@ -1,3 +1,7 @@
+"""
+Xbox API module to get song information and data from Microsoft Xbox Music API.
+"""
+
 import requests
 import json
 
