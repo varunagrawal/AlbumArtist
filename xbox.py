@@ -5,19 +5,19 @@ Xbox API module to get song information and data from Microsoft Xbox Music API.
 import requests
 import json
 
+CLIENT_ID = "albumartist"
+CLIENT_SECRET = "YWAyia4PM2caxFrTcOBKPR5K9Ze9V4kSJyOO3IIdpV0="
+
 #query = "alice in chains them bones"
 
 def get_song(query):
     auth_url = "https://datamarket.accesscontrol.windows.net/v2/OAuth2-13"          # https://msdn.microsoft.com/en-us/library/dn546686.aspx  https://msdn.microsoft.com/en-us/library/dn546659.aspx
     url = "https://music.xboxlive.com"
 
-    client_id = "albumartist"
-    client_secret = "YWAyia4PM2caxFrTcOBKPR5K9Ze9V4kSJyOO3IIdpV0="
-
     scope = "http://music.xboxlive.com"
     grant_type = "client_credentials"
 
-    auth_payload = {'client_id': client_id, 'client_secret': client_secret, 'scope': scope, 'grant_type': grant_type}
+    auth_payload = {'client_id': CLIENT_ID, 'client_secret': CLIENT_SECRET, 'scope': scope, 'grant_type': grant_type}
 
     auth = requests.post(auth_url, data=auth_payload).json()
 
