@@ -32,6 +32,9 @@ def get_song(query):
 
 results = get_song(query)
 
+with f = open("xbox_results.json", 'w+'):
+    f.write(results)
+
 print(results)
 
 # Ideal album art 900x900 https://msdn.microsoft.com/en-us/library/dn546678.aspx
