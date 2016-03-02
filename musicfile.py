@@ -44,7 +44,7 @@ class MusicFile(MP3):
 if __name__ == "__main__":
     musicdir = "/Users/varun/Music/"
     music = get_all_music_files(musicdir)
-
+    
     print(music[0])
 
     mp3_file = MusicFile(music[0])

@@ -2,9 +2,9 @@ import os
 import json
 
 with open("music_filetypes.json", 'r') as f:
-    ftypes = json.loads(f.read())
+    music_ftypes = json.loads(f.read())
 
-valid_exts = [type["extension"] for type in ftypes["filetypes"]]
+valid_exts = [type["extension"] for type in music_ftypes["filetypes"]]
 
 
 def get_all_music_files(musicdir):

@@ -30,22 +30,17 @@ def get_song(query):
     return r.json()
 
 
-results = get_song(query)
+if __name__ == "__main__":
 
-with f = open("xbox_results.json", 'w+'):
-    f.write(results)
+    results = get_song(query)
 
-print(results)
+    with f = open("xbox_results.json", 'w+'):
+      f.write(results)
+
+    print(results)
 
 # Ideal album art 900x900 https://msdn.microsoft.com/en-us/library/dn546678.aspx
 
 #for track in results['Tracks']['Items']:
 #    print(track['Artists'][0]['Artist']['Name'])
 
-
-"""
-1. Create account on Azure Market Place
-2. Activate Xbox service https://datamarket.azure.com/dataset/xboxmusic/XboxMusicPlatform#
-3. Create new application https://datamarket.azure.com/developer/applications
-4. Run the code using Xbox API https://msdn.microsoft.com/en-us/library/dn546696.aspx
-"""
